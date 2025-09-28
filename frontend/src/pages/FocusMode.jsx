@@ -13,26 +13,28 @@ const FocusMode = () => {
   const [selectedTool, setSelectedTool] = useState("YouTube");
 
   return (
-    <div className="flex h-screen pt-[4.3rem] w-screen bg-black text-white overflow-auto scrollbar-hide">
-      {/* Sidebar */}
-      <FocusSidebar
-        sidebarOpen={sidebarOpen}
-        setSelectedTool={setSelectedTool}
-        selectedTool={selectedTool}
-      />
-
-      {/* Main content */}
-      <div className="flex-1 pr-3 overflow-auto scrollbar-hide">
-        {selectedTool === "YouTube" && <Youtube />}
-        {selectedTool === "Music" && <Music />}
-        {selectedTool === "Playlists" && <Playlist />}
-        {selectedTool === "Notes" && <Notes />}
-        {selectedTool === "Pomodoro" && <div className="p-4">Pomodoro</div>}
-        {selectedTool === "Todo List" && <TodoCalendarApp />}
-      </div>
-
+    <div className="flex h-screen  w-screen bg-black text-white overflow-auto scrollbar-hide">
       {/* Header */}
       <FocusHeader sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
+
+      <div className="flex pt-10 sm:pt-14 md:pt-[4.4rem] h-full">
+        {/* Sidebar */}
+        <FocusSidebar
+          sidebarOpen={sidebarOpen}
+          setSelectedTool={setSelectedTool}
+          selectedTool={selectedTool}
+        />
+
+        {/* Main content */}
+        <div className="flex-1 pr-3 overflow-auto scrollbar-hide">
+          {selectedTool === "YouTube" && <Youtube />}
+          {selectedTool === "Music" && <Music />}
+          {selectedTool === "Playlists" && <Playlist />}
+          {selectedTool === "Notes" && <Notes />}
+          {selectedTool === "Pomodoro" && <div className="p-4">Pomodoro</div>}
+          {selectedTool === "Todo List" && <TodoCalendarApp />}
+        </div>
+      </div>
 
       {/* Floating AI Assistant Button */}
       <AIAssistant />
