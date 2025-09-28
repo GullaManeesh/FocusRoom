@@ -13,7 +13,7 @@ const FocusMode = () => {
   const [selectedTool, setSelectedTool] = useState("YouTube");
 
   return (
-    <div className="flex h-screen pt-20 w-screen bg-black text-white overflow-auto scrollbar-hide">
+    <div className="flex h-screen pt-[4.3rem] w-screen bg-black text-white overflow-auto scrollbar-hide">
       {/* Sidebar */}
       <FocusSidebar
         sidebarOpen={sidebarOpen}
