@@ -34,7 +34,7 @@ const FocusMode = () => {
       {/* Header */}
       <FocusHeader sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-      {/* Floating Action Button */}
+      {/* Floating AI Assistant Button */}
       <AIAssistant />
     </div>
   );
